@@ -1,0 +1,404 @@
+/*
+Theme Name: AJ School Theme
+Author: Allan N. Jeremy
+Author URI: https://www.youtube.com/user/DeflixIncorporated12
+Version: 0.1
+*/
+
+//Mixins
+@mixin transition($property,$delay)
+{
+	-webkit-transition: $property $delay;
+	-moz-transition: $property $delay;
+	transition: $property $delay;
+
+}
+
+//--VARIABLE DECLARATIONS
+//SCREEN SIZES
+	//Widths
+//By default any value less than sm is xs
+$screen-w-sm:768px;
+$screen-w-md:992px;
+$screen-w-lg:1200px;
+
+	//Heights
+$screen-h-sm:768px;
+$screen-h-md:992px;
+$screen-h-lg:1200px;
+
+//BODY VARIABLES
+$body-bg-color:#ccc;
+$body-text-color: #333;
+
+// Button color variables
+$light-btn-color: #e6e6e6;
+$dark-btn-color: #1a1a1a;
+
+
+//NAVIGATION VARIABLES
+$navbar-border-radius:0px;
+$logoWidth:6.4em;
+$logoHeight:$logoWidth;
+
+$header-nav-bg:#1a1a1a;
+$header-nav-text:#e6e6e6;
+$header-text: #bbb;
+$header-text-hover:#ddd;
+
+//Primary navigation variables
+$primary-nav-bg:#008080;
+$primary-nav-text:$header-nav-text;
+$primary-nav-active-bg:$header-nav-bg;
+$primary-nav-hover-bg:darken($primary-nav-bg,8%);
+$primary-nav-hover-text:#eee;
+
+$primary-nav-padding:1em 1.5em ;
+$primary-padding :0.85em 0.5em 0.15em 0.5em;
+
+$primary-nav-font-size:14px;
+
+
+//Secondary navigation variables
+$secondary-nav-text:#808080;
+$secondary-nav-active-text:$header-nav-bg;
+$secondary-nav-hover-text:#eee;
+
+$secondary-nav-padding:0.2em 0.75em ;
+
+//Other button properties
+$btn-margin-top:2em;
+$btn-border-thickness:0.1em;
+$btn-border-radius:0px;
+$btn-transition-delay:0.2s;
+$btn-border-null:none;
+
+//SOCIAL MEDIA VARIABLES
+$social-link-color:#008080;
+$social-link-hover-color:#00ffff;
+
+//STYLING
+/*Fonts*/
+@font-face
+{
+	font-family:Raleway;
+	src:url('fonts/raleway-light.ttf');
+}
+
+@font-face
+{
+	font-family:Roboto;
+	src:url('fonts/roboto-medium.ttf');
+}
+
+$primary-nav-font-family:Raleway,Helvetica,Sans-serif;
+$btn-font-family:Roboto,Arial,Sans-serif;
+
+/*Navigation Styling*/
+.navbar
+{
+	border-radius:$navbar-border-radius;
+}
+.header-nav
+{
+	font-family:$primary-nav-font-family;
+	font-size:$primary-nav-font-size;
+	background-color:$header-nav-bg;
+	color:$header-nav-text;
+}
+
+
+//the school logo
+.nav-logo
+{
+	margin-top:1em;
+	
+	height:$logoHeight;
+	width: $logoWidth;
+}
+
+//Social media icons
+.social
+{
+/*float:right;*/
+vertical-align: top;
+	
+}
+
+.social-icon
+{
+	float:right;
+	margin-right:1em;
+	font-family:$btn-font-family;padding:0 1.25em;
+	padding:0.5em 1em;
+	text-decoration:none;
+	color:$social-link-color;
+	background-color:transparent;
+	border: 1px solid $social-link-color;
+
+	/*:link,:visited,:focus
+	{*/
+		:hover
+		{
+			//color:$social-link-hover-color;
+			text-decoration:none;
+			color:red;
+			@include transition(color, $btn-transition-delay);
+		}
+	/*}	*/
+	
+
+}
+
+/*Convenience */
+.clearfix
+{
+	clear:both;
+}
+//Center text
+.center_text
+{
+	text-align:center;
+}
+
+//Slogan
+#slogan
+{
+	color:$secondary-nav-text;
+}
+
+//School header text - contains the school name
+#school-header-text
+{
+	color:$header-text;
+	a
+	{
+		text-decoration:none;
+		color:$header-text;
+
+	}
+	
+	:hover
+	{
+		color:$header-text-hover;
+	}
+}
+
+/*Primary navigation styling*/
+.primary-nav
+{
+	background-color:$primary-nav-bg;
+	color:$primary-nav-text;
+	ul
+	{ 
+		//Set font info
+		font-family:$primary-nav-font-family;
+		font-size:$primary-nav-font-size;
+		//On tablets and above, attempt to center the navigation
+		@media screen and(min-width:$screen-w-sm)
+		{
+			
+			width:50%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+
+		//remove the list styling from the list
+		list-style-type: none;
+		padding:$primary-padding;
+		
+		:last-child
+		{
+			border-bottom:none;
+		}
+		//list items in the primary nav ul
+		li
+		{
+			background-color:transparent;
+			padding:$primary-nav-padding;
+			padding-bottom:-10px;
+			display:inline;
+			
+			//anchor/link items in the primary nav ul
+			a
+			{
+				padding:0px;
+				margin:0px;
+				text-decoration:none;
+				color:$primary-nav-text;
+			}
+
+					
+			//On mobile phones make the width of each li 100%
+			$mobileMargins:0.25em;
+			@media screen and (max-width:$screen-w-sm)
+			{
+				display:block;
+				margin-top:$mobileMargins;
+				margin-bottom:$mobileMargins;
+				border-bottom:1px solid lighten($primary-nav-bg,5);
+				
+			}
+
+		}
+		li:hover
+		{
+			background-color:$primary-nav-hover-bg;
+			a
+			{
+				color:$primary-nav-hover-text;
+			}
+		}
+	}
+}
+
+/*Stick footer*/
+.sticky {
+  background-color:darken($primary-nav-bg,2);
+  opacity:0.95;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  border-top: 0;
+}
+
+/*Secondary navigation*/
+.nav-secondary
+{
+	ul
+	{
+	list-style-type: none;
+	float:right;
+		li
+		{
+			background-color:transparent;
+			padding:$secondary-nav-padding;
+			display:inline;
+			a
+			{
+				text-decoration:none;
+				color:$secondary-nav-text;
+			}
+			a:hover
+			{
+				color:$header-nav-text;
+				@include transition(color,$btn-transition-delay/1.5);
+			}
+		}
+	}
+}
+
+/*Button color styling*/
+.btn
+{
+	font-family:$btn-font-family;
+	border-radius:$btn-border-radius;
+}
+
+/*Light buttons*/
+.light-btn,
+.light-btn:focus
+{	
+	margin-top:$btn-margin-top;
+	text-decoration: none;
+	color:$light-btn-color;
+	background-color:transparent;
+	border:$btn-border-thickness solid $light-btn-color;
+
+	@include transition(background-color, $btn-transition-delay);
+}
+
+.light-btn:hover,
+.light-btn:focus:hover
+{
+	border:$btn-border-thickness solid $light-btn-color;
+	margin-top:$btn-margin-top;
+	text-decoration: none;
+	color:$dark-btn-color;
+	background-color:$light-btn-color;
+
+	@include transition(background-color, $btn-transition-delay);
+}
+
+/*Dark buttons*/
+.dark-btn,
+.dark-btn:focus
+{
+	//border:$btn-border-null;
+
+	margin-top:$btn-margin-top;
+	border:$btn-border-thickness solid $dark-btn-color;
+	text-decoration: none;
+	color:$light-btn-color;
+	background-color:$dark-btn-color;
+
+	@include transition(background-color, $btn-transition-delay);
+}
+
+.dark-btn:hover,
+.dark-btn:focus:hover
+{	
+	text-decoration: none;
+	color:$dark-btn-color;
+	background-color:transparent;
+	border:$btn-border-thickness solid $dark-btn-color;
+
+	@include transition(background-color, $btn-transition-delay);
+}
+
+/*Footer styling*/
+//Variables
+$footer-bg-color:$header-nav-bg;
+$footer-primary-content:$header-text;
+
+//footer
+footer
+{
+	background-color:red;
+	
+}
+main
+{
+	height:100%;
+}
+
+
+//Styling the site footer
+.site-footer
+{
+	margin-top:1em;
+	height:100%;
+	background-color:$footer-bg-color;
+	color:$footer-primary-content;
+	ul{
+
+		list-style-type:none;
+		
+		/*Don't add the divider after the last li*/
+		:last-child
+		{
+			border:none;
+		}
+
+		li
+		{
+			padding:0.1em 0.4em;
+			display:inline;
+			border-right:1px solid $footer-primary-content;
+
+
+			a{
+			
+			}
+		}
+	}
+
+}
+
+
+.white_text
+{
+	color:white !important;
+}

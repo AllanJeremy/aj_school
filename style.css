@@ -1,0 +1,211 @@
+/*
+Theme Name: AJ School Theme
+Author: Allan N. Jeremy
+Author URI: https://www.youtube.com/user/DeflixIncorporated12
+Version: 0.1
+*/
+/*Fonts*/
+@font-face {
+  font-family: Raleway;
+  src: url("fonts/raleway-light.ttf"); }
+@font-face {
+  font-family: Roboto;
+  src: url("fonts/roboto-medium.ttf"); }
+/*Navigation Styling*/
+.navbar {
+  border-radius: 0px; }
+
+.header-nav {
+  font-family: Raleway, Helvetica, Sans-serif;
+  font-size: 14px;
+  background-color: #1a1a1a;
+  color: #e6e6e6; }
+
+.nav-logo {
+  margin-top: 1em;
+  height: 6.4em;
+  width: 6.4em; }
+
+.social {
+  /*float:right;*/
+  vertical-align: top; }
+
+.social-icon {
+  float: right;
+  margin-right: 1em;
+  font-family: Roboto, Arial, Sans-serif;
+  padding: 0 1.25em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #008080;
+  background-color: transparent;
+  border: 1px solid #008080;
+  /*:link,:visited,:focus
+  {*/
+  /*}	*/ }
+  .social-icon :hover {
+    text-decoration: none;
+    color: red;
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    transition: color 0.2s; }
+
+/*Convenience */
+.clearfix {
+  clear: both; }
+
+.center_text {
+  text-align: center; }
+
+#slogan {
+  color: #808080; }
+
+#school-header-text {
+  color: #bbb; }
+  #school-header-text a {
+    text-decoration: none;
+    color: #bbb; }
+  #school-header-text :hover {
+    color: #ddd; }
+
+/*Primary navigation styling*/
+.primary-nav {
+  background-color: #008080;
+  color: #e6e6e6; }
+  .primary-nav ul {
+    font-family: Raleway, Helvetica, Sans-serif;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 0.85em 0.5em 0.15em 0.5em; }
+    @media screen and (min-width: 768px) {
+      .primary-nav ul {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto; } }
+    .primary-nav ul :last-child {
+      border-bottom: none; }
+    .primary-nav ul li {
+      background-color: transparent;
+      padding: 1em 1.5em;
+      padding-bottom: -10px;
+      display: inline; }
+      .primary-nav ul li a {
+        padding: 0px;
+        margin: 0px;
+        text-decoration: none;
+        color: #e6e6e6; }
+      @media screen and (max-width: 768px) {
+        .primary-nav ul li {
+          display: block;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+          border-bottom: 1px solid #00999a; } }
+    .primary-nav ul li:hover {
+      background-color: #005757; }
+      .primary-nav ul li:hover a {
+        color: #eee; }
+
+/*Stick footer*/
+.sticky {
+  background-color: #007676;
+  opacity: 0.95;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  border-top: 0; }
+
+/*Secondary navigation*/
+.nav-secondary ul {
+  list-style-type: none;
+  float: right; }
+  .nav-secondary ul li {
+    background-color: transparent;
+    padding: 0.2em 0.75em;
+    display: inline; }
+    .nav-secondary ul li a {
+      text-decoration: none;
+      color: #808080; }
+    .nav-secondary ul li a:hover {
+      color: #e6e6e6;
+      -webkit-transition: color 0.13333s;
+      -moz-transition: color 0.13333s;
+      transition: color 0.13333s; }
+
+/*Button color styling*/
+.btn {
+  font-family: Roboto, Arial, Sans-serif;
+  border-radius: 0px; }
+
+/*Light buttons*/
+.light-btn,
+.light-btn:focus {
+  margin-top: 2em;
+  text-decoration: none;
+  color: #e6e6e6;
+  background-color: transparent;
+  border: 0.1em solid #e6e6e6;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
+
+.light-btn:hover,
+.light-btn:focus:hover {
+  border: 0.1em solid #e6e6e6;
+  margin-top: 2em;
+  text-decoration: none;
+  color: #1a1a1a;
+  background-color: #e6e6e6;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
+
+/*Dark buttons*/
+.dark-btn,
+.dark-btn:focus {
+  margin-top: 2em;
+  border: 0.1em solid #1a1a1a;
+  text-decoration: none;
+  color: #e6e6e6;
+  background-color: #1a1a1a;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
+
+.dark-btn:hover,
+.dark-btn:focus:hover {
+  text-decoration: none;
+  color: #1a1a1a;
+  background-color: transparent;
+  border: 0.1em solid #1a1a1a;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
+
+/*Footer styling*/
+footer {
+  background-color: red; }
+
+main {
+  height: 100%; }
+
+.site-footer {
+  margin-top: 1em;
+  height: 100%;
+  background-color: #1a1a1a;
+  color: #bbb; }
+  .site-footer ul {
+    list-style-type: none;
+    /*Don't add the divider after the last li*/ }
+    .site-footer ul :last-child {
+      border: none; }
+    .site-footer ul li {
+      padding: 0.1em 0.4em;
+      display: inline;
+      border-right: 1px solid #bbb; }
+
+.white_text {
+  color: white !important; }
+
+/*# sourceMappingURL=style.css.map */
