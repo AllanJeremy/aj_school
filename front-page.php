@@ -7,7 +7,7 @@
             while(have_posts()) :
             the_post();
     ?>
-        <h1 class='center_text'><?php the_title();?></h1>
+        <h1 class='center_text'>Home - <?php the_title();?></h1>
         <?php the_content( "Some text","Some teaser" );?>
     
     <?php

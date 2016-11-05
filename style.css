@@ -76,10 +76,11 @@ Version: 0.1
     font-family: Raleway, Helvetica, Sans-serif;
     font-size: 14px;
     list-style-type: none;
-    padding: 0.85em 0.5em 0.15em 0.5em; }
+    padding: 0.85em 0.5em 0.15em 0.5em;
+    /*Current menu item*/ }
     @media screen and (min-width: 768px) {
       .primary-nav ul {
-        width: 50%;
+        width: 75%;
         margin-left: auto;
         margin-right: auto; } }
     .primary-nav ul :last-child {
@@ -94,7 +95,7 @@ Version: 0.1
         margin: 0px;
         text-decoration: none;
         color: #e6e6e6; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         .primary-nav ul li {
           display: block;
           margin-top: 0.25em;
@@ -104,6 +105,10 @@ Version: 0.1
       background-color: #005757; }
       .primary-nav ul li:hover a {
         color: #eee; }
+    .primary-nav ul .current-menu-item {
+      background-color: #1a1a1a; }
+    .primary-nav ul .current-menu-item:hover {
+      background-color: #232323; }
 
 /*Stick footer*/
 .sticky {
@@ -132,6 +137,13 @@ Version: 0.1
       -webkit-transition: color 0.13333s;
       -moz-transition: color 0.13333s;
       transition: color 0.13333s; }
+  .nav-secondary ul .current-menu-item a {
+    color: #d45500; }
+  .nav-secondary ul .current-menu-item a:hover {
+    color: #c04d00;
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    transition: color 0.2s; }
 
 /*Button color styling*/
 .btn {

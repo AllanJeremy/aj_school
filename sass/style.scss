@@ -61,7 +61,7 @@ $primary-nav-font-size:14px;
 
 //Secondary navigation variables
 $secondary-nav-text:#808080;
-$secondary-nav-active-text:$header-nav-bg;
+$secondary-nav-active-text:#d45500;
 $secondary-nav-hover-text:#eee;
 
 $secondary-nav-padding:0.2em 0.75em ;
@@ -198,7 +198,7 @@ vertical-align: top;
 		@media screen and(min-width:$screen-w-sm)
 		{
 			
-			width:50%;
+			width:75%;
 			margin-left:auto;
 			margin-right:auto;
 		}
@@ -211,6 +211,9 @@ vertical-align: top;
 		{
 			border-bottom:none;
 		}
+		
+
+		
 		//list items in the primary nav ul
 		li
 		{
@@ -219,6 +222,9 @@ vertical-align: top;
 			padding-bottom:-10px;
 			display:inline;
 			
+
+
+
 			//anchor/link items in the primary nav ul
 			a
 			{
@@ -231,7 +237,7 @@ vertical-align: top;
 					
 			//On mobile phones make the width of each li 100%
 			$mobileMargins:0.25em;
-			@media screen and (max-width:$screen-w-sm)
+			@media screen and (max-width:($screen-w-sm - 1))
 			{
 				display:block;
 				margin-top:$mobileMargins;
@@ -249,6 +255,18 @@ vertical-align: top;
 				color:$primary-nav-hover-text;
 			}
 		}
+
+		/*Current menu item*/
+		.current-menu-item
+		{
+			background-color:$primary-nav-active-bg;
+		}
+
+		.current-menu-item:hover
+		{
+			background-color:lighten($primary-nav-active-bg,3.5);
+		}
+
 	}
 }
 
@@ -285,6 +303,19 @@ vertical-align: top;
 			{
 				color:$header-nav-text;
 				@include transition(color,$btn-transition-delay/1.5);
+			}
+		}
+
+		.current-menu-item
+		{
+			a
+			{
+				color:$secondary-nav-active-text;
+			}
+			a:hover
+			{
+				color:darken($secondary-nav-active-text,4);
+				@include transition(color,$btn-transition-delay);
 			}
 		}
 	}

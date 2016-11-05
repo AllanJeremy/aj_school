@@ -8,7 +8,10 @@
 
 <title><?php bloginfo('name')?></title>
  <?php wp_head(); ?>
- 
+ <?php 
+    $school_name = "MWANICOS ACADEMY";
+    $school_slogan = "Strive For Excellence";
+ ?>
 </head>
 <body <?php body_class();?>>
     <header class="site-header">
@@ -17,9 +20,9 @@
                 <a href="<?php get_home_url();?>"><img class="nav-logo" alt="school logo" src="<?php echo get_template_directory_uri().'/media/logo.png'?>"/></a>
             </div>
             <div class='col-xs-8 col-md-6'>
-                <h1 id='school-header-text' class='hidden-xs center_text'><a href="<?php get_home_url();?>">SCHOOL NAME</a></h1>
-                <h3 id='school-header-text' class='visible-xs center_text'><a href="<?php get_home_url();?>">SCHOOL NAME</a></h3>
-                <h3 id='slogan' class='hidden-xs center_text'>School slogan</h3>
+                <h1 id='school-header-text' class='hidden-xs center_text'><a href="<?php get_home_url();?>"><?php echo $school_name?></a></h1>
+                <h3 id='school-header-text' class='visible-xs center_text'><a href="<?php get_home_url();?>"><?php echo $school_name?></a></h3>
+                <h3 id='slogan' class='hidden-xs center_text'><?php echo $school_slogan?></h3>
             </div>
 
             
