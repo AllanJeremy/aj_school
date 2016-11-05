@@ -196,17 +196,15 @@ Version: 0.1
   transition: background-color 0.2s; }
 
 /*Footer styling*/
-footer {
-  background-color: red; }
-
 main {
   height: 100%; }
 
+/*Site footer*/
 .site-footer {
   margin-top: 1em;
   height: 100%;
   background-color: #1a1a1a;
-  color: #bbb; }
+  color: #777; }
   .site-footer ul {
     list-style-type: none;
     /*Don't add the divider after the last li*/ }
@@ -215,7 +213,7 @@ main {
     .site-footer ul li {
       padding: 0.1em 0.4em;
       display: inline;
-      border-right: 1px solid #bbb; }
+      border-right: 1px solid #777; }
 
 .white_text {
   color: white !important; }
