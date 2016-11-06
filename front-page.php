@@ -1,24 +1,47 @@
 <?php get_header(); ?>
 
-<iv class='container'>
-    <?php
-        if(have_posts()):
-            the_content();
-            while(have_posts()) :
-            the_post();
-    ?>
-        <h1 class='center_text'>Home - <?php the_title();?></h1>
-        <?php the_content( "Some text","Some teaser" );?>
+<div class='container-fluid' id='home-container'>
+   
+    <div class='offset-top well col-xs-12'>
+        Introduction/ Welcome message
+    </div>
     
-    <?php
-         endwhile;
-         
-        
-        else:
-            echo "<p>No posts available</p>";
-        
-        endif;
-    ?>
+    
+
+    <!--About us-->
+    <div class='well col-xs-12 col-md-8'>
+        About us
+    </div>   
+    
+    <!--Ad panel-->
+    <div class='well col-xs-12 col-md-3 col-md-offset-1 ad'>
+        Some advertisement
+    </div>
+
+    <!--Alumni quote-->
+    <div class='well col-xs-12 testimonial'>
+        Some testimonial
+    </div>
+
+    <div class='well col-xs-12'>
+        Get started
+    </div>
+    <hr class='hidden-xs'/>
+
+    <!--Latest blog posts-->
+    <div class='center_text well col-xs-12 col-sm-4'>
+        Blog post 1
+    </div>
+
+     <div class='center_text well col-xs-12 col-sm-4'>
+         Blog post 2
+    </div>
+
+    <div class='center_text well col-xs-12 col-sm-4'>
+        Blog post 3
+    </div>
+
+
 </div>
 
 <?php get_footer(); ?>

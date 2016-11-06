@@ -54,6 +54,9 @@ Version: 0.1
 .clearfix {
   clear: both; }
 
+.offset-top {
+  margin-top: 1em; }
+
 .center_text {
   text-align: center; }
 
@@ -217,5 +220,18 @@ main {
 
 .white_text {
   color: white !important; }
+
+/*Home page styling*/
+.home-scroll-menus ul {
+  list-style-type: none; }
+  .home-scroll-menus ul li {
+    display: inline; }
+    .home-scroll-menus ul li a {
+      text-decoration: none;
+      color: #4d4d4d; }
+    .home-scroll-menus ul li a.active {
+      text-decoration: none;
+      border: none;
+      color: #111; }
 
 /*# sourceMappingURL=style.css.map */

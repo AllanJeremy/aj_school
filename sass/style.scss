@@ -77,6 +77,12 @@ $btn-border-null:none;
 $social-link-color:#008080;
 $social-link-hover-color:#00ffff;
 
+
+//Primary and secondary text
+$primary-dark-text:#111;
+$secondary-dark-text:#4d4d4d;
+$primary-light-text:#ccc;
+$secondary-light-text:#808080;
 //STYLING
 /*Fonts*/
 @font-face
@@ -154,6 +160,12 @@ vertical-align: top;
 .clearfix
 {
 	clear:both;
+}
+
+//Add margin top
+.offset-top
+{
+	margin-top:1em;
 }
 //Center text
 .center_text
@@ -424,4 +436,28 @@ main
 .white_text
 {
 	color:white !important;
+}
+
+/*Home page styling*/
+.home-scroll-menus
+{
+	ul
+	{
+		list-style-type:none;
+		li
+		{
+			display:inline;
+			a
+			{
+				text-decoration:none;
+				color:$secondary-dark-text;
+			}
+			a.active
+			{
+				text-decoration:none;
+				border:none;
+				color:$primary-dark-text;
+			}
+		}
+	}
 }

@@ -17,7 +17,7 @@
                 &copy
                 <?php
                     echo date('Y');
-                    echo " <a href='".get_home_url()."'>School name</a>";
+                    echo " <a href='".get_home_url()."'>Mwanicos Academy</a>";
                 ?>
                 </p>
             </div>
