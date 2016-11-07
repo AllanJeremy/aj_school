@@ -28,7 +28,7 @@ $screen-h-md:992px;
 $screen-h-lg:1200px;
 
 //BODY VARIABLES
-$body-bg-color:#ccc;
+$body-bg-color:#ddd;
 $body-text-color: #333;
 
 // Button color variables
@@ -84,6 +84,7 @@ $secondary-dark-text:#4d4d4d;
 $primary-light-text:#ccc;
 $secondary-light-text:#808080;
 //STYLING
+
 /*Fonts*/
 @font-face
 {
@@ -97,6 +98,11 @@ $secondary-light-text:#808080;
 	src:url('fonts/roboto-medium.ttf');
 }
 
+/*BODY*/
+body
+{
+	background-color:$body-bg-color;
+}
 $primary-nav-font-family:Raleway,Helvetica,Sans-serif;
 $btn-font-family:Roboto,Arial,Sans-serif;
 
@@ -460,4 +466,54 @@ main
 			}
 		}
 	}
+}
+
+/*Image captions - attempt
+.center-caption
+{
+	
+	position:absolute !important;
+	font-family:Roboto,sans-serif;
+	@media screen and (min-width:$screen-w-sm) {top:25%;}
+	@media screen and (max-width:$screen-w-sm - 1){top:15%;}
+	width:100%;
+	margin:0;
+	z-index:100;
+	color:#ddd;
+	p
+	{
+		font-size:16px;
+	}
+}
+
+.caption-img
+{
+	max-width:100%
+}
+
+*/
+
+$homePanel-min-h:15em;
+$homePanel-margin-top:0.75em;
+
+.home-dark
+{
+	background-color:$dark-btn-color;
+	color:$light-btn-color;
+}
+
+.home-panel
+{
+	margin-top:$homePanel-margin-top;
+	min-height:$homePanel-min-h;
+}
+
+.testimonial
+{
+	min-height:$homePanel-min-h/4;
+}
+
+.light-bg
+{
+	background-color:#fff;
 }

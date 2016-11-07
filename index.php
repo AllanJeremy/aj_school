@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
-<iv class='container'>
+<span class='container'>
     <?php
         if(have_posts()):
             the_content();
             while(have_posts()) :
             the_post();
     ?>
-        <h1 class='center_text'><?php the_title();?></h1>
-        <?php the_content( "Some text","Some teaser" );?>
+ 
+       
     
     <?php
          endwhile;
@@ -19,6 +19,6 @@
         
         endif;
     ?>
-</div>
+</span>
 
 <?php get_footer(); ?>

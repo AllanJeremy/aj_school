@@ -1,6 +1,4 @@
     
-    </div><!--main body div-->
-
     </main>
     
     <footer class='site-footer'>

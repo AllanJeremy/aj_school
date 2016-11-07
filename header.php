@@ -57,5 +57,4 @@
     <!--Main site content-->
     <main>
     
-    <div class='container'>
 
