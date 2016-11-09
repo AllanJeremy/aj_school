@@ -320,4 +320,11 @@ main {
   .home-news .panel-body {
     color: #4d4d4d; }
 
+textarea {
+  resize: vertical;
+  min-height: 2em; }
+
+input.form-control {
+  border-radius: 0; }
+
 /*# sourceMappingURL=style.css.map */

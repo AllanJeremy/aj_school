@@ -587,3 +587,13 @@ $homePanel-margin-top:0.75em;
 	}
 }
 
+textarea
+{
+	resize:vertical;
+	min-height:2em;
+}
+
+input.form-control
+{
+	border-radius: 0;
+}
