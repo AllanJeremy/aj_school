@@ -13,7 +13,7 @@ Version: 0.1
   src: url("fonts/roboto-medium.ttf"); }
 /*BODY*/
 body {
-  background-color: #ddd; }
+  background-color: #eee; }
 
 /*Navigation Styling*/
 .navbar {
@@ -58,11 +58,18 @@ body {
 .clearfix {
   clear: both; }
 
+.v-spacer {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em; }
+
 .offset-top {
   margin-top: 1em; }
 
 .center_text {
   text-align: center; }
+
+.right_text {
+  text-align: right; }
 
 #slogan {
   color: #808080; }
@@ -274,6 +281,43 @@ main {
   min-height: 3.75em; }
 
 .light-bg {
-  background-color: #fff; }
+  background-color: transparent;
+  color: #1a1a1a; }
+
+.dark-bg, .alumni-container {
+  background-color: #1a1a1a;
+  color: #ddd; }
+
+.dark-hr {
+  border-color: #777; }
+
+/*Alumni Container*/
+.alumni-container {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc; }
+
+/*Jobs & careers page styling*/
+.job-list .job {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1.2px solid #ccc; }
+
+.job-list .job:last-of-type {
+  border-bottom: none; }
+
+/*Home news*/
+.home-news {
+  border-radius: 0;
+  background-color: #fff !important;
+  border: 0.1em solid #ccc;
+  width: width/1.2;
+  border-right: 0.1em solid #ccc; }
+  @media screen and (min-width: 768px) {
+    .home-news {
+      min-height: 15em; } }
+  .home-news .panel-header {
+    border-bottom: 0.1em solid #ccc; }
+  .home-news .panel-body {
+    color: #4d4d4d; }
 
 /*# sourceMappingURL=style.css.map */

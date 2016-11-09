@@ -27,3 +27,13 @@ register_nav_menus( array(
     'primary_nav'=>__('Primary Navigation'),
     'footer_nav'=>__('Footer Section')
 ));
+
+//Create an excerpt based on content
+function generate_custom_excerpt($post=null,$excerpt_length=55,$permalink_name='')
+{
+   $content =  substr(strip_tags($post->post_content,'<p>'),0,$excerpt_length);
+   $permalink = get_permalink($post);
+   $permalink_html = "<a href='$permalink'>".$permalink_name."</a>";
+
+   return ($content." ".$permalink_html);
+}

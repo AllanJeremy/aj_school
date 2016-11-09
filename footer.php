@@ -2,7 +2,7 @@
     </main>
     
     <footer class='site-footer'>
-    <div class="footer-content">
+    <div class="footer-content light-bg">
             <nav class="footer-nav col-xs-12 center_text">
                 <?php
                     $args_footer_left = array("theme_location"=>"footer_nav");
@@ -14,8 +14,9 @@
                 <p>
                 &copy
                 <?php
+                    $home_path = "http://localhost/wordpress/";
                     echo date('Y');
-                    echo " <a href='".get_home_url()."'>Mwanicos Academy</a>";
+                    echo " <a href='".$home_path."'>Mwanicos Academy</a>";
                 ?>
                 </p>
             </div>

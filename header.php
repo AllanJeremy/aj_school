@@ -9,6 +9,7 @@
 <title><?php bloginfo('name')?></title>
  <?php wp_head(); ?>
  <?php 
+    $home_path = "http://localhost/wordpress/";
     $school_name = "MWANICOS ACADEMY";
     $school_slogan = "Strive For Excellence";
  ?>
@@ -17,11 +18,11 @@
     <header class="site-header">
         <div class="header-nav col-xs-12">
             <div class='col-xs-4 col-md-2'>
-                <a href="<?php get_home_url();?>"><img class="nav-logo" alt="school logo" src="<?php echo get_template_directory_uri().'/media/logo.png'?>"/></a>
+                <a href="<?php echo $home_path ?>"><img class="nav-logo" alt="school logo" src="<?php echo get_template_directory_uri().'/media/logo.png'?>"/></a>
             </div>
             <div class='col-xs-8 col-md-6'>
-                <h1 id='school-header-text' class='hidden-xs center_text'><a href="<?php get_home_url();?>"><?php echo $school_name?></a></h1>
-                <h3 id='school-header-text' class='visible-xs center_text'><a href="<?php get_home_url();?>"><?php echo $school_name?></a></h3>
+                <h1 id='school-header-text' class='hidden-xs center_text'><a href="<?php echo $home_path ?>"><?php echo $school_name?></a></h1>
+                <h3 id='school-header-text' class='visible-xs center_text'><a href="<?php echo $home_path ?>"><?php echo $school_name?></a></h3>
                 <h3 id='slogan' class='hidden-xs center_text'><?php echo $school_slogan?></h3>
             </div>
 

@@ -28,7 +28,7 @@ $screen-h-md:992px;
 $screen-h-lg:1200px;
 
 //BODY VARIABLES
-$body-bg-color:#ddd;
+$body-bg-color:#eee;
 $body-text-color: #333;
 
 // Button color variables
@@ -168,6 +168,13 @@ vertical-align: top;
 	clear:both;
 }
 
+$spacing_height:1.25em;
+.v-spacer
+{
+	padding-top:$spacing_height;
+	padding-bottom:$spacing_height;
+}
+
 //Add margin top
 .offset-top
 {
@@ -177,6 +184,12 @@ vertical-align: top;
 .center_text
 {
 	text-align:center;
+}
+
+//Right text
+.right_text
+{
+	text-align:right;
 }
 
 //Slogan
@@ -515,5 +528,62 @@ $homePanel-margin-top:0.75em;
 
 .light-bg
 {
-	background-color:#fff;
+	background-color:transparent;
+	color:#1a1a1a;
 }
+
+.dark-bg
+{
+	background-color:#1a1a1a;
+	color:#ddd;
+}
+
+.dark-hr
+{
+	border-color: #777;
+}
+/*Alumni Container*/
+.alumni-container
+{
+	@extend .dark-bg;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+
+/*Jobs & careers page styling*/
+.job-list .job
+{
+	padding-top:1em;
+	padding-bottom:1em;
+	border-bottom:1.2px solid #ccc;
+
+}
+
+
+.job-list .job:last-of-type
+{
+	border-bottom:none;
+}
+
+/*Home news*/
+.home-news
+{
+	border-radius:0;
+	background-color:#fff !important;
+	@media screen and (min-width:$screen-w-sm)
+	{
+		min-height:15em;
+	}
+	border:0.1em solid $primary-light-text;
+	width:width/1.2;
+	border-right:0.1em solid $primary-light-text;
+	.panel-header
+	{
+		border-bottom:0.1em solid $primary-light-text;
+	}
+	.panel-body
+	{
+		color:$secondary-dark-text;
+	}
+}
+
